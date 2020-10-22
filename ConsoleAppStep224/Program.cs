@@ -16,6 +16,11 @@ namespace ConsoleAppStep224
             int passNum = Convert.ToInt32(Console.ReadLine());
             problem1.DivideByTwo(passNum);
             Console.ReadLine();
-        }
+            
+            Class1OutputInt problem2 = new Class1OutputInt();
+            problem2.EnterNextValue(out passNum);
+            problem2.DivideByTwo();
+            Console.ReadLine();
+        
     }
 }
