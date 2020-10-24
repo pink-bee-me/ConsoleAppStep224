@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,12 @@ namespace ConsoleAppStep224
             Console.WriteLine(paramOption);
             Console.ReadLine();
         }
-
-      
+        //overload of ClassOutputInt added by changing the type of parameter accepted
+        public Class1OutputInt(string passNum)
+        {
+            Console.WriteLine("Class is instantiated with the creation of an object whose parameter data type is a string.");
+            Console.ReadLine();
+        }
 
         public void DivideByTwo(int passNum = 0)
         {
@@ -31,7 +36,14 @@ namespace ConsoleAppStep224
             Console.WriteLine(argIsNotZero);
             Console.ReadLine();
         }
-        
+        //overloaded method
+        public int DividedByTwo(int passNum)
+        {
+            int resultDivByTwo = passNum / 2;
+            Console.WriteLine("The result of " + passNum + " divided by 2: ");
+            Console.ReadLine();
+            return resultDivByTwo;
+        }
         public void EnterNextValue(out int nextValue)
         {
             Console.WriteLine("Enter another value to see this program in action one more time: ");
