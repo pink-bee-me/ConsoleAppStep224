@@ -8,20 +8,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppStep224
 {
-    class static void Class3
+    static class Class3
     {
-       public Class3()
-    {
-            Console.WriteLine("if you are finished type \"yes\":");
-            string theEnd = Console.ReadLine();
-            string answer = (theEnd == "yes")
-                ? "\n\n Thank you for running this program. The End. Bye."
-                : "I know you don't want to stop... because this is so much fun!! \n But All Good Things Must Come To An End....Farewell, My Friend....Farewell.";
+        
+        
+        public static string myMethod()
+        {
+            string theEnd = "You are finished now.";
 
+            string theAnswer = "\n\n Thank you for running this program. The End. Bye." +
+                               "\n\n I know you don't want to stop... because this is so much fun!!" +
+                               "\n\n But All Good Things Must Come To An End....Farewell, My Friend....Farewell.";
+           
+            return theEnd + theAnswer;
 
-            Console.WriteLine(answer);
-            Console.ReadLine();
         }
+
+        
+
+        }
+
     }
 
-}
